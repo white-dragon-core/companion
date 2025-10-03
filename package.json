@@ -7,7 +7,6 @@
     "testez-companion-node-cli": "dist/index.js"
   },
   "scripts": {
-    "postinstall": "rokit install && git submodule update --init",
     "build": "tsc",
     "build:plugin":"rokit install && rojo build -p testez-componion-node-cli.rbxm plugin",
     "dev": "ts-node src/index.ts",
