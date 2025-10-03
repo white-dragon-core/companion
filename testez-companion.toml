@@ -1,0 +1,15 @@
+# TestEZ Companion Configuration
+
+# Test root directories
+roots = [
+    "game/ReplicatedStorage",
+    "game/ServerStorage",
+    "game/ServerScriptService"
+]
+
+# Optional: Extra options for tests
+[test_extra_options]
+# Add any custom test options here
+# Example:
+# timeout = 5000
+# verbose = true

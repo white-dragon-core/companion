@@ -1,0 +1,37 @@
+{
+  "name": "testez-componion-node-cli",
+  "version": "1.0.0",
+  "description": "CLI for TestEZ Companion - TypeScript version",
+  "main": "dist/index.js",
+  "bin": {
+    "testez-companion-node-cli": "dist/index.js"
+  },
+  "scripts": {
+    "postinstall": "rokit install && git submodule update --init",
+    "build": "tsc",
+    "build:plugin":"rokit install && rojo build -p testez-componion-node-cli.rbxm plugin",
+    "dev": "ts-node src/index.ts",
+    "start": "node dist/index.js",
+    "watch": "tsc --watch",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.15.0",
+  "devDependencies": {
+    "@tsconfig/node20": "^20.1.6",
+    "@types/express": "^5.0.3",
+    "@types/node": "^24.5.2",
+    "nodemon": "^3.1.10",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.2"
+  },
+  "dependencies": {
+    "chalk": "^5.6.2",
+    "commander": "^14.0.1",
+    "express": "^5.1.0",
+    "inquirer": "^12.9.6",
+    "toml": "^3.0.0"
+  }
+}
