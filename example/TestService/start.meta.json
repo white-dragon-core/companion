@@ -1,0 +1,9 @@
+{
+   "properties": {
+      "RunContext": "Server",
+      "Attributes": {
+         "Foo": {"Bool": true},
+         "Bar": {"Vector3": [1.0, 2.0, 3.0]}
+      }
+   }
+}

@@ -1,6 +1,6 @@
 {
-  "name": "companion",
-  "version": "1.0.1",
+  "name": "testez-companion-node-cli",
+  "version": "0.1.0",
   "description": "CLI for TestEZ Companion - TypeScript version",
   "main": "dist/index.js",
   "bin": {

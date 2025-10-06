@@ -1,0 +1,14 @@
+{
+	"name": "@white-dragon-bevy/bevy_plugin_example",
+	"globIgnorePaths": [
+		"**/package.json",
+		"**/tsconfig.json"
+	],
+	"tree": {
+		"$className": "DataModel",
+		"TestService":{
+			"$className": "TestService",
+			"$path": "TestService"
+		}
+	}
+}
