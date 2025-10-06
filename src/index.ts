@@ -254,6 +254,9 @@ async function main() {
           process.exit(1);
         }
       }
+    } else if (pattern) {
+      // 如果位置参数被提供，且没有通过 -g/-r 指定 gameName，则位置参数也作为 gameName
+      gameName = pattern;
     }
 
     // 如果没有明确指定 --only-print-failures，则默认只显示失败

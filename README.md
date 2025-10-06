@@ -1,4 +1,4 @@
-# TestEZ Companion CLI (TypeScript)
+# Companion CLI
 
 TypeScript 版本的 TestEZ Companion CLI，用于从命令行运行 Roblox 测试。
 
