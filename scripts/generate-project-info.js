@@ -58,10 +58,29 @@ try {
 
   // 3. 执行 git 命令
   // 将所有工作区变更添加到临时索引中
-  execSync('git add -A', options);
+  try {
+    execSync('git add -A', options);
+  } catch (gitAddError) {
+    console.error('错误: git add -A 失败');
+    console.error(gitAddError.message);
+    if (gitAddError.stderr) {
+      console.error(gitAddError.stderr.toString());
+    }
+    throw gitAddError;
+  }
 
   // 基于临时索引生成树哈希, 并获取其输出
-  const hash = execSync('git write-tree', options).toString().trim();
+  let hash;
+  try {
+    hash = execSync('git write-tree', options).toString().trim();
+  } catch (gitWriteTreeError) {
+    console.error('错误: git write-tree 失败');
+    console.error(gitWriteTreeError.message);
+    if (gitWriteTreeError.stderr) {
+      console.error(gitWriteTreeError.stderr.toString());
+    }
+    throw gitWriteTreeError;
+  }
   projectInfo.hash = hash;
 
   // 添加生成时间

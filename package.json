@@ -1,12 +1,13 @@
 {
   "name": "testez-companion-node-cli",
-  "version": "0.1.1",
+  "version": "0.1.3",
   "description": "CLI for TestEZ Companion - TypeScript version",
   "main": "dist/index.js",
   "bin": {
     "testez-companion-node-cli": "dist/index.js"
   },
   "scripts": {
+    "prepublish":"rojo build plugin -o testez-companion-node-cli.rbxm",
     "build": "tsc",
     "build:plugin":"rokit install && rojo build -p testez-companion-node-cli.rbxm plugin",
     "dev": "ts-node src/index.ts",
@@ -14,6 +15,12 @@
     "watch": "tsc --watch",
     "typecheck": "tsc --noEmit"
   },
+  "files":[
+    "dist",
+    "package.json",
+    "example",
+    "testez-companion-node-cli.rbxm"
+  ],
   "keywords": [],
   "author": "",
   "license": "ISC",
